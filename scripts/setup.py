@@ -36,5 +36,14 @@ def tlsLength():
     else:
         print("Error")
 
+def allFingerprint():
+    result = subprocess.run("../joy/bin/joy fpx=1  \
+                ../pcap/capture.pcap > full.gz",  shell=True)
+    if result.returncode == 0:
+        process = subprocess.run("../joy/sleuth --select 'fingerprints'  \
+                full.gz > lol.json", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        createJson(str(process.stdout, "utf-8"))
+
+
 if __name__ == "__main__":
-    tlsLength();
+    allFingerprint();
