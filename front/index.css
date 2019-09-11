@@ -1,0 +1,69 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(white, white,  grey);
+}
+
+header, main {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    height: 40%;
+}
+
+main {
+    width: 100%;
+}
+main > div {
+    width: 400px;
+    height:400px;
+
+}
+
+.upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.upload > i{
+    margin:20px;
+    font-size: 80px;
+    color: rgb(38, 38, 212);
+}
+
+.upload > button {
+    margin: 10px;
+    background-color: rgb(38, 38, 212); /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 25px;
+  }
+  
+button:hover {
+    background-color: rgb(61, 187, 61);
+    padding: 17px 34px;
+    cursor: pointer;
+}
+
+ p > label  {
+    font-family: Helvetica;
+    cursor: pointer;
+  }
+
+  label > input {
+      cursor: pointer;
+  }
+
+  #form {
+      display: none;
+      justify-content: center;
+  }

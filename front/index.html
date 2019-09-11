@@ -1,0 +1,61 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+    </head>
+    <body>
+        <header>
+            <div>
+                <img width="400px" src="large.png">
+            </div>
+        </header>
+        <main>
+            <div id="upload" class="upload">
+                <i class="material-icons">cloud_upload</i>
+                <label>In order to upload</label>
+                <form enctype="multipart/form-data" action="/upload/image" method="post"></form>
+                    <input onchange="upload()" id="file" type="file" style="display:none" />
+                </form>
+                <button onclick="document.getElementById('file').click();">Choose File</button>
+            </div>
+            <div id="form">
+            <form action="#">
+                    <p>
+                      <label>
+                        <input class="with-gap" name="group1" type="radio"  />
+                        <span>Malware behavior</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input class="with-gap" name="group1" type="radio" />
+                        <span>TLS server certificate chains</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input class="with-gap" name="group1" type="radio"  />
+                        <span>TLS Fingerprinting</span>
+                      </label>
+                    </p>
+                    <p>
+                            <label>
+                              <input class="with-gap" name="group1" type="radio"  />
+                              <span>SSH brute-force attack</span>
+                            </label>
+                          </p>
+                  </form>
+                  </div>
+        </main>
+    </body>
+    <script>
+       function upload(){
+            console.log(1);
+            document.getElementById("upload").style.display="none";
+            console.log(document.getElementById("upload").style);
+            document.getElementById("form").style.display="flex";
+       }
+    </script>
+</html>
